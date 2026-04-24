@@ -6,7 +6,8 @@
     <style>
         body { font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; line-height: 1.6; background: #f9f9f9; }
         .header { text-align: center; padding: 30px 0; background: #2c7a4a; color: white; border-radius: 10px; }
-        .btn { display: inline-block; background: #ff9800; color: white; padding: 12px 24px; margin: 20px 0; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 20px 0; }
+        .btn { display: inline-block; background: #ff9800; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.2s; }
         .btn:hover { background: #e68900; }
         .section { margin: 30px 0; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .team { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
@@ -23,7 +24,11 @@
     <div class="header">
         <h1>📄 一纸双益</h1>
         <p>节约一张纸，成就两份益</p>
-        <a href="business.html" class="btn">📢 我是商家 →</a>
+        <div class="btn-group">
+            <a href="student.html" class="btn">🎓 我是学生 →</a>
+            <a href="business.html" class="btn">📢 我是商家 →</a>
+            <a href="shop.html" class="btn">🖨️ 我是打印店 →</a>
+        </div>
     </div>
 
     <div class="section">
