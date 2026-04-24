@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>学生中心 - 一纸双益</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f0f2f5; }
+        .header { text-align: center; background: #2c7a4a; color: white; padding: 20px; border-radius: 10px; }
+        .back { display: inline-block; background: #fff; color: #2c7a4a; padding: 8px 16px; margin: 10px 0; text-decoration: none; border-radius: 5px; }
+        .card { background: white; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .demo-img { width: 100%; max-width: 400px; display: block; margin: 10px auto; border-radius: 8px; border: 1px solid #ddd; cursor: pointer; transition: transform 0.2s; }
+        .demo-img:hover { transform: scale(1.02); }
+        .btn { background: #ff9800; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .free-quota { background: #e8f5e9; padding: 15px; border-radius: 8px; text-align: center; font-size: 24px; font-weight: bold; color: #2c7a4a; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>📚 学生免费复印平台</h2>
+        <a href="index.html" class="back">← 返回首页</a>
+    </div>
+
+    <div class="card">
+        <h3>🎓 你的免费复印额度</h3>
+        <div class="free-quota">
+            本月剩余：50张（每学期可领200张）
+        </div>
+        <p style="margin-top: 10px;">每次复印仅需上传资料，选择附近合作复印店，即可免费打印背面试卷/笔记。</p>
+    </div>
+
+    <div class="card">
+        <h3>📱 学生端小程序界面</h3>
+        <img src="3.jpg" alt="学生上传资料界面" class="demo-img" onclick="openModal(this.src)">
+        <p style="text-align: center;">通过小程序上传资料 → 选择纸张大小 → 选择打印店 → 到店免费取件。</p>
+    </div>
+
+    <div class="card">
+        <h3>📄 支持打印类型</h3>
+        <ul>
+            <li>学习笔记、作业、论文</li>
+            <li>社团活动材料、策划书</li>
+            <li>复习资料、考试重点</li>
+            <li>背面附有商家广告，不影响正面内容</li>
+        </ul>
+        <button class="btn" onclick="alert('请登录小程序预约打印，或联系客服获取帮助')">📲 立即预约打印</button>
+    </div>
+
+    <div class="card">
+        <h3>🌟 学生福利</h3>
+        <ul>
+            <li>每月首次打印额外赠送10张</li>
+            <li>推荐好友注册，双方各得20张免费额度</li>
+            <li>集满100张可兑换环保礼品一份</li>
+        </ul>
+    </div>
+
+    <!-- 图片放大模态框 -->
+    <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:999;" onclick="closeModal()">
+        <img id="modalImg" style="max-width:90%; max-height:90%; border-radius:8px;">
+    </div>
+    <script>
+        function openModal(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
